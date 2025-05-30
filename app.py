@@ -11,7 +11,7 @@ def check_airbnb():
     reserved_dates = []
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = browser.new_page()
         page.goto("https://www.airbnb.co.kr/rooms/1315132686200650033#availability-calendar")
         page.wait_for_timeout(5000)
