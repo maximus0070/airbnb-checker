@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Airbnb 예약 현황</title>
+</head>
+<body>
+    <h1>예약된 날짜 (오늘 이후)</h1>
+    <ul>
+        {% for date in dates %}
+            <li>{{ date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
